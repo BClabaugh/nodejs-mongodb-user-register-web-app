@@ -16,5 +16,8 @@ COPY . .
 # Expose the port the app runs on
 EXPOSE 5000
 
+#Inject Error to cause build failure
+RUN cat does-not-exist.txt
+
 # Define the command to run the app (using "npm start")
 CMD [ "npm", "start" ]

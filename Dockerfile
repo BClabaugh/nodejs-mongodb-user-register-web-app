@@ -10,6 +10,9 @@ COPY package*.json ./
 # Install app dependencies
 RUN npm install
 
+# Intentionally Introduced Error for pt. 4
+RUN exit 1
+
 # Bundle app source
 COPY . .
 
